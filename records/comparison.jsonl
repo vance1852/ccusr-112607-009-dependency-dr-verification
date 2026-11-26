@@ -1,0 +1,6 @@
+{"at": 1, "kind": "failure", "exercise": "h2", "site": "west", "reference_position": 42, "topology": 8}
+{"at": 2, "kind": "readiness", "instance": "edge-w", "dependency": "report", "durable_at": 33, "configured": 8}
+{"at": 3, "kind": "transaction", "id": "r2", "exercise": "h2", "site": "west", "capability": "query"}
+{"at": 4, "kind": "observed_call", "id": "r2", "dependency": "report", "destination": "edge-w", "status": "ok"}
+{"at": 6, "kind": "conclude", "exercise": "h2", "capability": "query"}
+{"at": 7, "kind": "abort", "exercise": "h2"}

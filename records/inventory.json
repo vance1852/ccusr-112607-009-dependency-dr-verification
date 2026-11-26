@@ -1,0 +1,53 @@
+{
+  "plans": {
+    "east/query": {
+      "dependencies": [
+        "report"
+      ],
+      "rto": 6,
+      "max_loss": 3
+    },
+    "east/new": {
+      "dependencies": [
+        "report",
+        "register",
+        "partner"
+      ],
+      "rto": 14,
+      "max_loss": 1
+    },
+    "west/query": {
+      "dependencies": [
+        "report"
+      ],
+      "rto": 9,
+      "max_loss": 2
+    }
+  },
+  "locations": {
+    "report": [
+      "edge-e",
+      "edge-w"
+    ],
+    "register": [
+      "edge-e"
+    ],
+    "partner": [
+      "edge-e",
+      "legacy"
+    ]
+  },
+  "links": {
+    "shared-main": {
+      "owners": [
+        "east",
+        "west"
+      ]
+    },
+    "east-old": {
+      "owners": [
+        "east"
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{"at": 1, "kind": "failure", "exercise": "h1", "site": "east", "reference_position": 42, "topology": 8}
+{"at": 2, "kind": "isolate", "exercise": "h1", "link": "shared-main", "scope": ["east"]}
+{"at": 3, "kind": "readiness", "instance": "edge-e", "dependency": "report", "durable_at": 40, "configured": 8}
+{"at": 4, "kind": "transaction", "id": "r1", "exercise": "h1", "site": "east", "capability": "query"}
+{"at": 5, "kind": "observed_call", "id": "r1", "dependency": "report", "destination": "edge-e", "status": "ok"}
+{"at": 6, "kind": "readiness", "instance": "edge-e", "dependency": "register", "durable_at": 41, "configured": 8}
+{"at": 7, "kind": "transaction", "id": "w1", "exercise": "h1", "site": "east", "capability": "new"}
+{"at": 8, "kind": "observed_call", "id": "w1", "dependency": "partner", "destination": "legacy", "status": "ok"}
+{"at": 9, "kind": "isolate", "exercise": "h1", "link": "east-old", "scope": ["east"]}
+{"at": 10, "kind": "readiness", "instance": "edge-e", "dependency": "partner", "durable_at": 42, "configured": 8}
+{"at": 10, "kind": "readiness", "instance": "edge-e", "dependency": "report", "durable_at": 41, "configured": 8}
+{"at": 11, "kind": "transaction", "id": "w2", "exercise": "h1", "site": "east", "capability": "new"}
+{"at": 12, "kind": "observed_call", "id": "w2", "dependency": "register", "destination": "edge-e", "status": "ok"}
+{"at": 12, "kind": "observed_call", "id": "w2", "dependency": "report", "destination": "edge-e", "status": "ok"}
+{"at": 13, "kind": "observed_call", "id": "w2", "dependency": "partner", "destination": "edge-e", "status": "ok"}
+{"at": 14, "kind": "conclude", "exercise": "h1", "capability": "new"}
+{"at": 15, "kind": "topology", "revision": 9}
+{"at": 16, "kind": "restart", "endpoint": "exercise-control"}
